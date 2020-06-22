@@ -1,10 +1,10 @@
 # Site settings
 title: Yunhe Gao's Blog
 SEOTitle: 云河的博客 | Yunhe Blog
-header-img: img/post-bg-desk.jpg
+header-img: img/post-bg-wallpaper.jpg
 email: yunhe.gao@rutgers.edu
 description: "Every failure is leading towards success."
-keyword: "BY, BY Blog, 柏荧的博客, qiubaiying, 邱柏荧, iOS, Apple, iPhone"
+keyword: "Yunhe Gao, Deep Learning, Computer Vision, Medical Image Analysis"
 url: "http://yhygao.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/yhygao/yhygao.github.io" # you code repository
