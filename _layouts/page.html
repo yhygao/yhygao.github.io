@@ -153,6 +153,28 @@ layout: default
                                 </a>
                             </li>
                             {% endif %}
+                            {% endif %}
+                            {% if site.px_username %}
+                            <li>
+                                <a target="_blank" href="https://500px.com.cn/{{ site.px_username }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa  fa-stack-1x fa-inverse">px</i>
+                                    </span>
+                                </a>
+                            </li>
+                            {% endif %}
+                            {% endif %}
+                            {% if site.ins_username %}
+                            <li>
+                                <a target="_blank" href="https://www.instagram.com/{{ site.ins_username }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa  fa-stack-1x fa-inverse">Ins</i>
+                                    </span>
+                                </a>
+                            </li>
+                            {% endif %}
                             {% if site.weibo_username %}
                             <li>
                                 <a target="_blank" href="http://weibo.com/{{ site.weibo_username }}">
