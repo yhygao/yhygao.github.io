@@ -57,7 +57,17 @@
                         </a>
                     </li>
                     {% endif %}
-
+                    <!-- add 500px, add target = "_blank" to <a> by Yunhe -->
+                        {% if site.px_username %}
+                        <li>
+                            <a target="_blank" href="https://500px.com.cn/{{ site.zhihu_username }}">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa  fa-stack-1x fa-inverse">500px</i>
+                                </span>
+                            </a>
+                        </li>
+                        {% endif %}
 
                     {% if site.facebook_username %}
                     <li>
