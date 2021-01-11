@@ -1,15 +1,13 @@
 ---
 layout:     post
-title:      测试blog，第一篇markdown blog
-subtitle:   测试
-date:       2020-06-22
+title:      Mathematics Foundation of Computer Science
+subtitle:   (1) Intro
+date:       2021-01-11
 author:     Yunhe
-header-img: img/post-bg-ios9-web.jpg
+header-img: img/post-bg-math.jpg
 catalog: true
 tags:
-    - DeepLearning
-    - Segmentation
-    - AutoAugmentation
+    - Mathematics
 ---
 
 # 前言
