@@ -8,6 +8,7 @@ header-img: img/post-bg-math.jpg
 catalog: true
 tags:
     - Mathematics
+    - Machine Learning
 ---
 
 # Preface
