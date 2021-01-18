@@ -39,7 +39,9 @@ Transformer由于能够较好的捕捉序列中远距离的关系，在NLP领域
 self-attention的一个大的问题是显存占用和计算量的问题，要计算每个像素的pair-wise attention map，计算量和存储大矩阵都是与feature map维度成平方关系的，对于浅层大分辨率的特征图是扛不住的。Stand-alone self-attention[<sup>4</sup>](#refer-anchor-3) 提出了在local path中，如7\*7，使用self-attention，这样能够解决计算量和现存的问题，使得self-attention能够应用在整个网络中。
 
 
+## Method
 
+作者提出了一个对卷积网络很有意思的观点，我之前没有把这两点分解看来。网络层的功能有两种：feature aggregation和feature transformation。 
 
 
 
