@@ -27,7 +27,7 @@ tags:
 
 ## Prologue
 
-Transformer由于能够较好的捕捉序列中远距离的关系，在NLP领域大放异彩。近期，也有vision领域也有许多关于Transformer的工作。Transformer的基本模块是self-attention module，而self-attention在vision领域已经热过一阵子了，有很多有影响力的工作 [<sup>1</sup>](#refer-anchor-1) [<sup>2</sup>](#refer-anchor-2)。但是这些self-attention都存在一些问题，比如计算量过大，导致整个网络一般只有在降采样到最小分辨率之后，才使用一层self-attention来捕捉long-range的关系。如果想将Transformer应用到Vision领域，这个问题是需要解决的。本论文就是一个尝试，它提出了两种self-attention module： pairwise self-attention，patchwise self-attention。
+Transformer由于能够较好的捕捉序列中远距离的关系，在NLP领域大放异彩。近期，vision领域也有许多关于Transformer的工作。Transformer的基本模块是self-attention module，而self-attention在vision领域已经热过一阵子了，有很多有影响力的工作 [<sup>1</sup>](#refer-anchor-1) [<sup>2</sup>](#refer-anchor-2)。但是这些self-attention都存在一些问题，比如计算量过大，导致整个网络一般只有在降采样到最小分辨率之后，才使用一层self-attention来捕捉long-range的关系。如果想将Transformer应用到Vision领域，这个问题是需要解决的。本论文就是一个尝试，它提出了两种self-attention module： pairwise self-attention，patchwise self-attention。
 
 ## Introduction
 
@@ -41,7 +41,19 @@ self-attention的一个大的问题是显存占用和计算量的问题，要计
 
 ## Method
 
-作者提出了一个对卷积网络很有意思的观点，我之前没有把这两点分解看来。网络层的功能有两种：feature aggregation和feature transformation。 
+作者将卷积神经网络层的功能分为了两种：feature aggregation和feature transformation。所谓feature aggregation就是将前面一层的feature收集起来，transformation就是通过线性和非线性映射将特征映射到更高维的空间，增加拟合能力。transformation在transformer里面就是用feedforward pereceptron+非线性激活函数来做的。因此本文focus在feature aggregation这一步。
+
+传统卷积操作是通过固定的卷积核和训练好的参数从附近像素中提取特征。这个卷积核weights和卷积核覆盖的范围都是固定不变的，不会根据图片的内容而变化。作者提出了新的feature aggregation方法（via self-attention），和feature transformation（via elementwise perceptrons）。
+
+### Pairwise Self-attention
+
+$ y_i = \sum_{j\in R(i)} \alpha(x_i, x_j) \odot \beta(x_j) $
+
+这个就是之前常用的self-attention的形式的一个抽象，唯一的区别就是这里并不是全图aggregate，而是限制在区域$R(i)$中。$\beta(x_j)$是经过transform的特征。$\alpha(x_i, x_j)$为aggregate所需要的矩阵，它包含了从区域$R(i)$中每个像素aggregate信息的权重。$\alpha$ function可以有很多种选择，文章里尝试了summation，subtraction，concatenation，Hadamard product和Dot product。self-attention是完全从feature角度来的，忽略掉了位置信息，因此文章里也加入了position encoding来补充位置信息。
+
+### Patchwise Self-attention
+
+其实这里没怎么看懂
 
 
 
