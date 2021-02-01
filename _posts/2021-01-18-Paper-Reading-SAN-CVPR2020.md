@@ -60,6 +60,12 @@ $ y_i = \sum_{j\in R(i)} \alpha(x_i, x_j) \odot \beta(x_j) $
 
 这篇文章将图片分成16x16的patch，将每个patch的encoding作为序列输入到transformer中，每个patch就相当于NLP中的单词。这篇文章的结论是，transformer如果在ImageNet这种量级的数据集上，结果会略低于ResNet的结果。这可能是由于Transformer缺乏CNN的inductive biases，比如局部连接和平移不变性，因此不太容易从“少量”的数据中学习到这些inductive biases。但是到了更大的数据集（14M-300M个图片的时候），transformer就能够学到这些东西，并有较好的transfer的能力。
 
+<div align=center>
+<img src="https://github.com/yhygao/yhygao.github.io/blob/master/img/post_img/vision_transformer/ViT.JPG" />
+</div>
+
+因为正常NLP中Transformer的输入是1D的token embedding。他们把2D图片（H\*W\*C)分为多个patch，比如分成16\*16个patch，这样每个patch的分辨率为P*P，P=H/16（这里假设图像是正方形的。
+
 
 
 
