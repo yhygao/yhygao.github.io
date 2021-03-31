@@ -15,7 +15,7 @@ tags:
 
 **Computer graphics** is concerned with all aspects of producing pictures or images using a computer. At the very first, we can only draw some lines and figures in the monitor; now, we can generate images by computer that are indistinguisable from the real images.
 
-#### Application of computer Graphics
+### Application of computer Graphics
 
 1. **Display of information**
    a) CG as a medium to convey information among people as visual system is unrivaled for human to receive information.
@@ -30,3 +30,17 @@ tags:
     c) Virtual reality (VR) is a rising field of CG to create stereoscopic vision.
 4. **User interfaces**
     a) The interaction with computers is dominated by CG, which is a visual paradigm that includes windows, icons, menus, and a pointing devices.
+
+### A graphics systems
+
+A computer graphics systems is a computer system consists of six major elements:
+1. Input devices
+2. Central Processing Unit (CPU)
+3. Graphics Processing Unit (GPU)
+4. Memory
+5. Framebuffer
+6. Output devices
+
+<div align=center>
+<img src="https://raw.githubusercontent.com/yhygao/yhygao.github.io/master/img/post_img/graphics/post-img-graphics-system.jpg" />
+</div>
