@@ -45,3 +45,7 @@ Modern machine learing is driven by data and model, where the model is used to d
 Some typical data can be spread sheet, images etc. For example, in the spread sheet, each row of data represent a person, while each collumn represent some kinds of features, e.g. sex, height, weight and other health metrics. Using this way, a dataset can be a spread sheet with thoudsands of such rows. Mathametically, each person can be represented with a **vector**: $\boldsymbol{V}=(v_1, v_2, \dots, v_n)$. Each value can be either real valued vectors (e.g. heights), boolean value (sex), or discrete value (age).
 
 In image perspective, a picture of cat is a $1000\times 1000\times 3$ matrix, which has 3 million dimensions. It is extremely difficult to classify images with such high dimension. One solution is using **embeddings**, a convenient data transformation approach, to embed the high-dimensional data to some low-dimensional space which is easier for classification. For instance, if we can find a function *f*, such that $f(\textbf{V})$ embeds cats in the third quadrant while embeds dogs in the first quadrant, we can easily classify cat vs. dog using a linear classifier. 
+<div align=center >
+<img src="https://raw.githubusercontent.com/yhygao/yhygao.github.io/master/img/post_img/math_foundation/Catdog.png" width="200" height="200"/>
+</div>
+But finding a good embedding from high-dimensional data is a difficult task. DNNs are good at learning this kind of representation hierarchically. 
